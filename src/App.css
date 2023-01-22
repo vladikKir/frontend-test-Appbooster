@@ -1,0 +1,17 @@
+#converter {
+    margin: 40px 10px;
+    max-width: 1240px;
+    justify-content: space-around;
+}
+
+.row {
+    margin: 20px 10px;
+}
+
+#navbar {
+    max-width: 1240px;
+}
+
+.converter-side {
+    max-width: 500px;
+}
