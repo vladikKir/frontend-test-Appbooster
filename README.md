@@ -1,1 +1,2 @@
-Currency converter(Frontend test for Appbooster)
+### Launch:
+make start

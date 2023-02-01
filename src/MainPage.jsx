@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Button, ButtonGroup, Form } from "react-bootstrap";
 import NavBar from "./Navbar";
 
@@ -9,7 +9,7 @@ const MainPage = () => {
   const [fromCur, setFromCur] = useState('rub');
   const [toCur, setToCur] = useState('usd');
 
-  const handleFormChange = (e) => {
+  const handleFromChange = (e) => {
     const value = e.target.value;
     const getCurrency = async () => {
       const response = await axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${fromCur}.json`);
@@ -66,7 +66,7 @@ const MainPage = () => {
             <Row>
               <Form onSubmit={(e) => {e.preventDefault()}}>
                 <Form.Group className="mb-3">
-                <Form.Control className="form-control" as="input" value={fromState} onChange={handleFormChange} />
+                <Form.Control className="form-control" as="input" value={fromState} onChange={handleFromChange} />
                 </Form.Group>
               </Form>
             </Row>
